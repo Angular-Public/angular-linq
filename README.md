@@ -1,5 +1,5 @@
 # angular-linq
-linq.js library for AngularJs 
+linq.js library for AngularJS
 http://linqjs.codeplex.com/
 
 Latest Version: 1.0.0
