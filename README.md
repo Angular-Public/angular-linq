@@ -1,5 +1,17 @@
 # angular-linq
-Inspired and Ported from Linq.js  - http://linqjs.codeplex.com/
+Inspired and Ported from Linq.js - http://linqjs.codeplex.com/
+
+Latest Version: 1.0.0
+
+Install:
+
+```
+bower install angular-linq
+```
+
+Injector: ``` $linq ```
+Accessing Enumerable: ``` $linq.Enumerable() ```
+
 
 Example Usage:
 
