@@ -1,8 +1,8 @@
 # angular-linq
 Inspired and Ported from Linq.js  - http://linqjs.codeplex.com/
 
-//Example Usage:
-//mycontroller.js
+Example Usage:
+
 ```
 (function() {
   'use strict';
