@@ -1,5 +1,6 @@
 # angular-linq
-Inspired and Ported from Linq.js - http://linqjs.codeplex.com/
+linq.js library for AngularJs 
+http://linqjs.codeplex.com/
 
 Latest Version: 1.0.0
 
