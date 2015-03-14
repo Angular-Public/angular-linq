@@ -1,7 +1,7 @@
 {
   "name": "angular-linq",
   "main": "angular-linq.js",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/Angular-Public/angular-linq",
   "authors": [
     "Rajkumar.Angular@Gmail.com"
@@ -15,6 +15,7 @@
     "yui"
   ],
   "keywords": [
+    "$linq"
     "angularjs",
     "linq",
     "linq.js",
