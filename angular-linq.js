@@ -1,7 +1,14 @@
-/**
- * Created by Rajkumar on 3/14/2015.
- */
- 
+/*--------------------------------------------------------------------------
+* linq.js - LINQ for JavaScript
+* ver 2.2.0.2 (Jan. 21th, 2011)
+*
+* created and maintained by neuecc <ils@neue.cc>
+* licensed under Microsoft Public License(Ms-PL)
+* http://neue.cc/
+* http://linqjs.codeplex.com/
+*--------------------------------------------------------------------------*/
+/** Angular Version **/
+
 (function() {
     'use strict';
 
