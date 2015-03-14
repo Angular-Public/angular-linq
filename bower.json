@@ -1,0 +1,32 @@
+{
+  "name": "angular-linq",
+  "main": "angular-linq.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Angular-Public/angular-linq",
+  "authors": [
+    "Rajkumar.Angular@Gmail.com"
+  ],
+  "description": "linq.js ported for AngularJs - http://linqjs.codeplex.com/",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "keywords": [
+    "angularjs",
+    "linq",
+    "linq.js",
+    "javascript",
+    "linqfactory"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
