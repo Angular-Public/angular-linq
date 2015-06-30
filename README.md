@@ -20,7 +20,7 @@ Example Usage:
 (function() {
   'use strict';
 
-  angular.module('mymodule')
+  angular.module('mymodule', [])
     .controller('mycontroller', MyController);
 
   MyController.$inject = [
