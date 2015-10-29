@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="AngularLinqTestApp">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Hello Angular LINQ</title>
+		<link rel="stylesheet"
+			href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<script
+			src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script
+			src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script
+			src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+		<script
+			src="//rawgit.com/Angular-Public/angular-linq/master/angular-linq.min.js"></script>
+		<script>
+			(function () {
+				'use strict';
+
+				// 1) Include angular-linq module to app 
+				angular.module('AngularLinqTestApp', [
+					'angular-linq'
+				]);
+				
+				angular.module('AngularLinqTestApp')
+					.controller('AngularLinqTestAppController', AngularLinqTestAppController);
+
+				// 2) Inject $linq to controller
+				AngularLinqTestAppController.$inject = [
+					'$linq'
+				];
+
+				function AngularLinqTestAppController($linq) {
+
+					/* jshint validthis: true */
+					var vm = this;
+					
+					vm.activate = function() {
+					
+						var jsonArray = [{
+							"user": {
+								"id": 100,
+								"screen_name": "Smith Jhon"
+							},
+							"text": "jsmith"
+						}, {
+							"user": {
+								"id": 130,
+								"screen_name": "Stephen Kriston"
+							},
+							"text": "kstephen"
+						}, {
+							"user": {
+								"id": 155,
+								"screen_name": "Emma Watson"
+							},
+							"text": "wemma"
+						}, {
+							"user": {
+								"id": 301,
+								"screen_name": "Winona Ryder"
+							},
+							"text": "rwinona"
+						}]
+						
+						// 2) Start using $linq
+						vm.queryResult = $linq.Enumerable().From(jsonArray)
+							.Where(function (x) {
+								return x.user.id < 200
+							})
+							.OrderBy(function (x) {
+								return x.user.screen_name
+							})
+							.Select(function (x) {
+								return x.user.screen_name + ':' + x.text
+							})
+							.ToArray();
+						console.log("vm.queryResult : ", vm.queryResult);
+					}
+					vm.activate();
+				}
+			})();
+		</script>
+	</head>
+	<body ng-controller="AngularLinqTestAppController as linqTestCtrl">
+		<div class="container">
+			<div ng-repeat="item in linqTestCtrl.queryResult">
+				User = {{::item}}
+			</div>
+		</div>
+	</body>
+</html>	

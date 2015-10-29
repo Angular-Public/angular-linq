@@ -17,61 +17,72 @@ Accessing Enumerable: ``` $linq.Enumerable() ```
 **Example Usage:**
 
 ```
-(function () {
-    'use strict';
+	(function () {
+		'use strict';
 
-    angular.module('mymodule', [])
-        .controller('mycontroller', MyController);
+		// 1) Include angular-linq module to app 
+		angular.module('AngularLinqTestApp', [
+			'angular-linq'
+		]);
+		
+		angular.module('AngularLinqTestApp')
+			.controller('AngularLinqTestAppController', AngularLinqTestAppController);
 
-    MyController.$inject = [
-        '$linq'
-    ];
+		// 2) Inject $linq to controller
+		AngularLinqTestAppController.$inject = [
+			'$linq'
+		];
 
-    function MyController($linq) {
+		function AngularLinqTestAppController($linq) {
 
-
-        var jsonArray = [{
-            "user": {
-                "id": 100,
-                "screen_name": "d_linq"
-            },
-            "text": "to objects"
-        }, {
-            "user": {
-                "id": 130,
-                "screen_name": "c_bill"
-            },
-            "text": "g"
-        }, {
-            "user": {
-                "id": 155,
-                "screen_name": "b_mskk"
-            },
-            "text": "kabushiki kaisha"
-        }, {
-            "user": {
-                "id": 301,
-                "screen_name": "a_xbox"
-            },
-            "text": "halo reach"
-        }]
-
-        var queryResult = $linq.Enumerable().From(jsonArray)
-            .Where(function (x) {
-                return x.user.id < 200
-            })
-            .OrderBy(function (x) {
-                return x.user.screen_name
-            })
-            .Select(function (x) {
-                return x.user.screen_name + ':' + x.text
-            })
-            .ToArray();
-
-        console.log("queryResult : ", queryResult);
-
-    }
-})();
+			/* jshint validthis: true */
+			var vm = this;
+			
+			vm.activate = function() {
+			
+				var jsonArray = [{
+					"user": {
+						"id": 100,
+						"screen_name": "Smith Jhon"
+					},
+					"text": "jsmith"
+				}, {
+					"user": {
+						"id": 130,
+						"screen_name": "Stephen Kriston"
+					},
+					"text": "kstephen"
+				}, {
+					"user": {
+						"id": 155,
+						"screen_name": "Emma Watson"
+					},
+					"text": "wemma"
+				}, {
+					"user": {
+						"id": 301,
+						"screen_name": "Winona Ryder"
+					},
+					"text": "rwinona"
+				}]
+				
+				// 2) Start using $linq
+				vm.queryResult = $linq.Enumerable().From(jsonArray)
+					.Where(function (x) {
+						return x.user.id < 200
+					})
+					.OrderBy(function (x) {
+						return x.user.screen_name
+					})
+					.Select(function (x) {
+						return x.user.screen_name + ':' + x.text
+					})
+					.ToArray();
+				console.log("vm.queryResult : ", vm.queryResult);
+			}
+			vm.activate();
+		}
+	})();
 
 ```
 **Example Output:**
@@ -85,7 +96,7 @@ queryResult: ["b_mskk:kabushiki kaisha", "c_bill:g", "d_linq:to objects"]
 **Change History:**
 
 1.0.1:
-    Fixes to support angular version 1.4.7
+Fixes to support angular version 1.4.7
 
 1.0.0:
-    Initial Version
+Initial Version
