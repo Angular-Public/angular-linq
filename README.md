@@ -2,7 +2,7 @@
 linq.js library for AngularJS
 http://linqjs.codeplex.com/
 
-**Latest Version:** 1.0.1
+**Latest Version:** 1.0.2
 
 **Install:**
 
@@ -94,6 +94,9 @@ vm.queryResult :  ["Emma Watson:wemma", "Smith Jhon:jsmith", "Stephen Kriston:ks
 
 
 **Change History:**
+
+1.0.2:
+Fixes to bower install
 
 1.0.1:
 Fixes to support angular version 1.4.x
