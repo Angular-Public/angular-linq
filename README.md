@@ -66,7 +66,7 @@ Accessing Enumerable: ``` $linq.Enumerable() ```
 					"text": "rwinona"
 				}]
 				
-				// 2) Start using $linq
+				// 3) Start using $linq
 				vm.queryResult = $linq.Enumerable().From(jsonArray)
 					.Where(function (x) {
 						return x.user.id < 200
