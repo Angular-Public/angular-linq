@@ -2,9 +2,9 @@
 linq.js library for AngularJS
 http://linqjs.codeplex.com/
 
-Latest Version: 1.0.1
+**Latest Version:** 1.0.1
 
-Install:
+**Install:**
 
 ```
 bower install angular-linq
@@ -14,7 +14,7 @@ Injector: ``` $linq ```
 Accessing Enumerable: ``` $linq.Enumerable() ```
 
 
-Example Usage:
+**Example Usage:**
 
 ```
 (function() {
@@ -84,7 +84,7 @@ queryResult: ["b_mskk:kabushiki kaisha", "c_bill:g", "d_linq:to objects"]
 
 
 
-Change History:
+**Change History:**
 
 1.0.1:
     Fixes to support angular version 1.4.7
