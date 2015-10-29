@@ -96,7 +96,7 @@ queryResult: ["b_mskk:kabushiki kaisha", "c_bill:g", "d_linq:to objects"]
 **Change History:**
 
 1.0.1:
-Fixes to support angular version 1.4.7
+Fixes to support angular version 1.4.x
 
 1.0.0:
 Initial Version
