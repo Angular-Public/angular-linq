@@ -87,7 +87,7 @@ Accessing Enumerable: ``` $linq.Enumerable() ```
 ```
 **Example Output:**
 
-queryResult: ["b_mskk:kabushiki kaisha", "c_bill:g", "d_linq:to objects"]
+vm.queryResult :  ["Emma Watson:wemma", "Smith Jhon:jsmith", "Stephen Kriston:kstephen"]
 
 
 
