@@ -2,7 +2,7 @@
 linq.js library for AngularJS
 http://linqjs.codeplex.com/
 
-Latest Version: 1.0.0
+Latest Version: 1.0.1
 
 Install:
 
